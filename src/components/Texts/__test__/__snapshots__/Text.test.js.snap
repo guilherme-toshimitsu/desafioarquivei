@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> creates a Text component 1`] = `
+<DocumentFragment>
+  <p
+    class="Texts__Text-pq9w5c-1 khPFWE"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Title /> creates a Title component 1`] = `
+<DocumentFragment>
+  <p
+    class="Texts__Title-pq9w5c-0 fiQxoW"
+  />
+</DocumentFragment>
+`;

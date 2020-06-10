@@ -1,67 +1,67 @@
 import React from "react";
-
 import { reduxForm, Field } from "redux-form";
 
-import { InputRedux } from "@components/Form";
-import { stringNotEmpty, onlyNumbers, validDate } from "@commons/validations";
+import Button from "@components/Button";
+import InsideContainer from "@components/InsideContainer";
 import { CNPJmask, DateMask, CVVmask } from "@commons/masks";
+import { InputRedux } from "@components/Form";
+import { Title, Text } from "@components/Texts";
+import { stringNotEmpty, onlyNumbers, validDate } from "@commons/validations";
 
-const onSubmit = (values) => {
-  alert(JSON.stringify(values));
-};
+import { ButtonContainer } from "../../styles";
 
 const CheckoutForm = ({ handleSubmit, valid }) => {
   return (
-    <div>
-      <h2>Form</h2>
-      <form onSubmit={handleSubmit}>
-        <Field
-          name="CNPJ"
-          label="CNPJ"
-          type="text"
-          component={InputRedux}
-          validate={[stringNotEmpty, onlyNumbers]}
-          {...CNPJmask}
-        />
+    <form onSubmit={handleSubmit}>
+      <Title> Informacoes de Cartao</Title>
+      <Field
+        name="CNPJ"
+        label="CNPJ"
+        type="text"
+        component={InputRedux}
+        validate={[stringNotEmpty, onlyNumbers]}
+        {...CNPJmask}
+      />
 
-        <Field
-          name="cardnumber"
-          type="text"
-          component={InputRedux}
-          label={"Card Number"}
-          validate={[stringNotEmpty, onlyNumbers]}
-        />
-        <Field
-          name="name"
-          type="text"
-          component={InputRedux}
-          label={"Name"}
-          validate={[stringNotEmpty]}
-        />
+      <Field
+        name="name"
+        type="text"
+        component={InputRedux}
+        label={"Owner"}
+        validate={[stringNotEmpty]}
+      />
+      <Field
+        name="cardnumber"
+        type="text"
+        component={InputRedux}
+        label={"Card Number"}
+        validate={[stringNotEmpty, onlyNumbers]}
+      />
 
-        <Field
-          name="cvv"
-          type="text"
-          component={InputRedux}
-          label={"CVV"}
-          {...CVVmask}
-          validate={[stringNotEmpty, onlyNumbers]}
-        />
+      <Field
+        name="cvv"
+        type="text"
+        component={InputRedux}
+        label={"CVV"}
+        {...CVVmask}
+        validate={[stringNotEmpty, onlyNumbers]}
+      />
 
-        <Field
-          name="cardexpiration"
-          type="text"
-          component={InputRedux}
-          placeholder={"Card Expiration Date"}
-          {...DateMask}
-          validate={[stringNotEmpty, onlyNumbers, validDate]}
-        />
-        <button disabled={!valid} type="submit">
-          submit
-        </button>
-      </form>
-    </div>
+      <Field
+        name="cardexpiration"
+        type="text"
+        component={InputRedux}
+        label={"Card Expiration Date"}
+        {...DateMask}
+        validate={[stringNotEmpty, onlyNumbers, validDate]}
+      />
+      <ButtonContainer>
+        <Button disabled={!valid} type="submit">
+          Comprar
+        </Button>
+      </ButtonContainer>
+    </form>
   );
 };
 
-export default reduxForm({ form: "payment-form", onSubmit })(CheckoutForm);
+export default reduxForm({ form: "payment-form" })(CheckoutForm);

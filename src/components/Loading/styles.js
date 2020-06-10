@@ -10,6 +10,7 @@ const Loading = styled.div`
   animation: spin 2s linear infinite;
   height: 80px;
   display: block;
+  margin-top: 60px;
   @keyframes spin {
     0% {
       transform: rotate(0deg);

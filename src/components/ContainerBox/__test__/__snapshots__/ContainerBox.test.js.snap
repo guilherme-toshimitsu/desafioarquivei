@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContainerBox /> creates a ContainerBox component 1`] = `
+<DocumentFragment>
+  <div
+    class="ContainerBox__StyledContentBox-sc-18d78nw-0 sYzDb"
+  />
+</DocumentFragment>
+`;

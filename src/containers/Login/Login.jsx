@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import Router from "next/router";
-import { LoginForm, LoginContentBox } from "./components";
+
 import { actions } from "@store/User";
 import Card from "@components/Card";
 import Loading from "@components/Loading";
+
+import { LoginForm, LoginContentBox } from "./components";
 
 const Login = () => {
   const { auth, isLoading } = useSelector((state) => state.userStore);

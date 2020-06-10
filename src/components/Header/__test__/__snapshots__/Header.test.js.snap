@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> creates a Header component 1`] = `
+<DocumentFragment>
+  <header
+    class="styles__HeaderContainer-xa09ss-0 eooKdB"
+  >
+    <img
+      class="styles__Img-xa09ss-1 jcOUEY"
+      src="/assets/logo-white-small.png"
+    />
+    <button
+      class="Button__StyledButton-pzevnv-0 iLzPQp"
+    >
+      Login
+    </button>
+  </header>
+</DocumentFragment>
+`;

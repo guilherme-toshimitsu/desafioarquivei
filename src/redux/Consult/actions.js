@@ -28,12 +28,12 @@ export default {
   [CONSTANTS.CONSULT_PURCHASE]: (state, args) => ({
     ...state,
     isLoading: true,
-    ...args,
   }),
   [CONSTANTS.CONSULT_PURCHASE_SUCCESS]: (state, args) => ({
     ...state,
     isLoading: false,
     consults: state.consults + state.consultsToBePurchased,
+    user: { ...args },
     consultsToBePurchased: 0,
     price: 0,
   }),
@@ -42,5 +42,9 @@ export default {
     isLoading: false,
     consultsToBePurchased: 0,
     price: 0,
+  }),
+  [CONSTANTS.START_LOADING]: (state, args) => ({
+    ...state,
+    isLoading: true,
   }),
 };

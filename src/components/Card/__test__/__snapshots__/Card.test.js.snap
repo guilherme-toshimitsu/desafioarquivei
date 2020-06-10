@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> creates a Button component 1`] = `
+<DocumentFragment>
+  <div
+    class="Card__StyledCard-sc-19fims7-0 HtJiy"
+  />
+</DocumentFragment>
+`;

@@ -19,8 +19,9 @@ const purchase = (data) => (dispatch) => {
     .then((res) => {
       dispatch({
         type: CONSTANTS.CONSULT_PURCHASE_SUCCESS,
+        ...data,
       });
-      alert("Success");
+      alert("Compra bem sucedida");
       Router.push("/");
     })
     .catch((err) => {
@@ -31,4 +32,4 @@ const purchase = (data) => (dispatch) => {
     });
 };
 
-export default { sendPriceAmmount, purchase };
+export default { sendPriceAmmount, purchase, Api };

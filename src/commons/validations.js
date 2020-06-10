@@ -13,18 +13,22 @@ const validDate = (value) => {
   const day = value.slice(0, 2);
   const month = value.slice(2, 4);
   const year = value.slice(4, 8);
-
+  const today = new Date();
   let checkdays = MONTHDAYS;
   if (year % 4 === 0) {
     checkdays = MONTHDAYSBI;
   }
 
-  if (month > 12) {
+  if (month > 12 || !month) {
     return "Invalid Month";
   }
 
   if (day > checkdays[month - 1]) {
     return "Invalid Day";
+  }
+
+  if (!year || year < today.getFullYear()) {
+    return "Invalid Year";
   }
 
   return undefined;
@@ -48,9 +52,11 @@ const validateEmail = (value) => {
   return undefined;
 };
 
-const higherThanEight = (value) => {
-  return value.length < 8 ? "Password to Short" : undefined;
-};
+const higherThanEight = (value) =>
+  value.length < 8 ? "Password to Short" : undefined;
+
+const higherThanThree = (value) =>
+  value.length < 3 ? "Invalid CVV" : undefined;
 
 export {
   stringNotEmpty,

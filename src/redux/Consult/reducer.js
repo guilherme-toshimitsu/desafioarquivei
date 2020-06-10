@@ -9,6 +9,7 @@ const initialState = {
   isLoading: false,
   price: 0,
   consultsToBePurchased: 0,
+  user: {},
 };
 
 export default (state = initialState, action) => reducer(state, action);

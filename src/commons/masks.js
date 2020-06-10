@@ -12,4 +12,9 @@ const DateMask = createTextMask({
   pattern: "99/99/9999",
 });
 
-export { CNPJmask, CVVmask, DateMask };
+const currencyMask = createNumberMask({
+  suffix: "Reais",
+  decimalPlaces: 2,
+});
+
+export { CNPJmask, CVVmask, DateMask, currencyMask };

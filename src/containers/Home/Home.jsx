@@ -3,28 +3,22 @@ import Router from "next/router";
 
 import Card from "@components/Card";
 import Button from "@components/Button";
-import {
-  HomeContainer,
-  PromotionText,
-  PromotionTitle,
-  ButtonContainer,
-} from "./styles";
+import InsideContainer from "@components/InsideContainer";
+import { Text, Title } from "@components/Texts";
+
+import { ButtonContainer } from "./styles";
 
 const Home = () => (
-  <HomeContainer>
+  <InsideContainer>
     <Card>
-      <PromotionTitle>Promocao de Consultas</PromotionTitle>
-      <PromotionText>
-        Desconto nas primeiras 1000 consultas: 0.09 centavos cada
-      </PromotionText>
-      <PromotionText>
-        Desconto nas 1000 consultas seguintes: 0.16 centavos cada
-      </PromotionText>
+      <Title>Promocao de Consultas</Title>
+      <Text>Desconto nas primeiras 1000 consultas: 0.09 centavos cada</Text>
+      <Text>Desconto nas 1000 consultas seguintes: 0.16 centavos cada</Text>
       <ButtonContainer>
         <Button onClick={() => Router.push("/consult")}>Venha Conferir</Button>
       </ButtonContainer>
     </Card>
-  </HomeContainer>
+  </InsideContainer>
 );
 
 export default Home;
