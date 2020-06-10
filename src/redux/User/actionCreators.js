@@ -25,7 +25,7 @@ const doLogin = (values) => (dispatch) => {
     });
 };
 
-const validateToken = () => (dispatch) => {
+const validateToken = (currentPath) => (dispatch) => {
   // function of token validation is mocked right now
   let token = sessionStorage.getItem("token");
   let username = sessionStorage.getItem("email");
@@ -36,6 +36,7 @@ const validateToken = () => (dispatch) => {
     if (token.includes("valid")) {
       dispatch({
         type: CONSTANTS.LOGIN_REQUEST_SUCCESS,
+        currentPath: currentPath,
         token,
         email: username,
       });
@@ -53,4 +54,8 @@ const logout = () => (dispatch) => {
   dispatch({ type: CONSTANTS.LOGOUT_REQUEST });
 };
 
-export default { doLogin, validateToken, logout };
+const selectCurrentPath = (currentPath) => (dispatch) => {
+  dispatch({ type: CONSTANTS.CURRENT_PATH, currentPath: currentPath });
+};
+
+export default { doLogin, validateToken, logout, selectCurrentPath };

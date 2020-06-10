@@ -9,7 +9,9 @@ import Loading from "@components/Loading";
 import { LoginForm, LoginContentBox } from "./components";
 
 const Login = () => {
-  const { auth, isLoading } = useSelector((state) => state.userStore);
+  const { auth, isLoading, currentPath } = useSelector(
+    (state) => state.userStore
+  );
   const [localLoading, setLocalLoading] = useState(true);
   const dispatch = useDispatch();
 
@@ -18,7 +20,8 @@ const Login = () => {
     dispatch(actions.validateToken());
     if (auth) {
       setLocalLoading(false);
-      Router.push("/home");
+      console.log("loginuseffect", currentPath);
+      Router.push(currentPath);
     }
     setLocalLoading(false);
   }, [auth]);

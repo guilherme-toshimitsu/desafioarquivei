@@ -56,13 +56,11 @@ const calculatePrice = (consults, consultsToBePurchased) => {
     2000
   );
 
-  console.log(numberOfPurchases);
   const price =
     numberOfPurchases[0] * F_PROMOTION +
     numberOfPurchases[1] * S_PROMOTION +
     numberOfPurchases[2] * NO_PROMOTION;
 
-  console.log(price / 1000);
   return price / 1000;
 };
 

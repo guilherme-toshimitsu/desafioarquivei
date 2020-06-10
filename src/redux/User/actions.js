@@ -24,4 +24,12 @@ export default {
     isLoading: false,
     checked: false,
   }),
+  [CONSTANTS.CURRENT_PATH]: (state, { currentPath }) => ({
+    ...state,
+    currentPath: currentPath,
+  }),
+  [CONSTANTS.CURRENT_PATH_RESET]: (state) => ({
+    ...state,
+    currentPath: "/",
+  }),
 };

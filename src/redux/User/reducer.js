@@ -10,6 +10,7 @@ const initialState = {
   auth: false,
   checked: false,
   isLoading: false,
+  currentPath: "/",
 };
 
 export default (state = initialState, action) => reducer(state, action);
