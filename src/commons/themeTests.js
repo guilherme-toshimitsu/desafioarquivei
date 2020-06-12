@@ -2,7 +2,6 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { render } from "@testing-library/react";
 import * as Redux from "react-redux";
-import thunk from "redux-thunk";
 import theme from "./theme";
 import store from "@store";
 

@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkout /> creates a Checkout component without the load from Consult 1`] = `
+<DocumentFragment>
+  <div
+    class="InsideContainer__Container-sc-1t900ay-0 cAJihm"
+  >
+    <div
+      class="Card__StyledCard-sc-19fims7-0 HtJiy"
+    >
+      <p
+        class="Texts__Title-pq9w5c-0 fiQxoW"
+      >
+        Compra invalida
+      </p>
+      <a
+        href="/consult"
+      >
+        Ir para Consultas
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Checkout /> creates a Checkout component, after consults are loaded 1`] = `
+<DocumentFragment>
+  <div
+    class="InsideContainer__Container-sc-1t900ay-0 cAJihm"
+  >
+    <div
+      class="Card__StyledCard-sc-19fims7-0 HtJiy"
+    >
+      <p
+        class="Texts__Text-pq9w5c-1 khPFWE"
+        data-testid="true-loaded"
+      >
+        100 consultas a serem compradas por 9.00 reais
+      </p>
+      <form>
+        <p
+          class="Texts__Title-pq9w5c-0 fiQxoW"
+        >
+           Informacoes de Cartao
+        </p>
+        <div
+          class="styles__InputContainer-sc-1ucodq7-0 fyGjJo"
+        >
+          <p
+            class="styles__StyledLabel-sc-1ucodq7-3 eRPBMe"
+          >
+            CNPJ
+          </p>
+          <input
+            class="styles__StyledInput-sc-1ucodq7-1 fJBjcv"
+            name="CNPJ"
+            placeholder=""
+            type="text"
+            value="___.___.___-__"
+          />
+        </div>
+        <div
+          class="styles__InputContainer-sc-1ucodq7-0 fyGjJo"
+        >
+          <p
+            class="styles__StyledLabel-sc-1ucodq7-3 eRPBMe"
+          >
+            Owner
+          </p>
+          <input
+            class="styles__StyledInput-sc-1ucodq7-1 fJBjcv"
+            name="name"
+            placeholder=""
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="styles__InputContainer-sc-1ucodq7-0 fyGjJo"
+        >
+          <p
+            class="styles__StyledLabel-sc-1ucodq7-3 eRPBMe"
+          >
+            Card Number
+          </p>
+          <input
+            class="styles__StyledInput-sc-1ucodq7-1 fJBjcv"
+            name="cardnumber"
+            placeholder=""
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          class="styles__InputContainer-sc-1ucodq7-0 fyGjJo"
+        >
+          <p
+            class="styles__StyledLabel-sc-1ucodq7-3 eRPBMe"
+          >
+            CVV
+          </p>
+          <input
+            class="styles__StyledInput-sc-1ucodq7-1 fJBjcv"
+            name="cvv"
+            placeholder=""
+            type="text"
+            value="___"
+          />
+        </div>
+        <div
+          class="styles__InputContainer-sc-1ucodq7-0 fyGjJo"
+        >
+          <p
+            class="styles__StyledLabel-sc-1ucodq7-3 eRPBMe"
+          >
+            Card Expiration Date
+          </p>
+          <input
+            class="styles__StyledInput-sc-1ucodq7-1 fJBjcv"
+            name="cardexpiration"
+            placeholder=""
+            type="text"
+            value="__/__/____"
+          />
+        </div>
+        <div
+          class="styles__ButtonContainer-ap13ju-0 hdiMdO"
+        >
+          <button
+            class="Button__StyledButton-pzevnv-0 kodjjF"
+            disabled=""
+            type="submit"
+          >
+            Comprar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -24,7 +24,7 @@ const Checkout = () => {
               <Loading />
             ) : (
               <>
-                <Text>
+                <Text data-testid={"true-loaded"}>
                   {`${consultsToBePurchased} consultas a serem compradas por ${price.toFixed(
                     2
                   )} reais`}
