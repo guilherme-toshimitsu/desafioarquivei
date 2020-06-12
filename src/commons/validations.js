@@ -1,13 +1,13 @@
 const MONTHDAYS = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const MONTHDAYSBI = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const onlyNumbersPattern = new RegExp("^[0-9]+$");
 
 const stringNotEmpty = (value) => {
   return !value || value === "" ? "Required" : undefined;
 };
 
-const onlyNumbers = (value) => {
-  !/^\d+$/.test(value) ? "Only Numbers" : undefined;
-};
+const onlyNumbers = (value) =>
+  onlyNumbersPattern.test(value) ? undefined : "Only Numbers";
 
 const validDate = (value) => {
   const day = value.slice(0, 2);

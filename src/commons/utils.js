@@ -61,7 +61,7 @@ const calculatePrice = (consults, consultsToBePurchased) => {
     numberOfPurchases[1] * S_PROMOTION +
     numberOfPurchases[2] * NO_PROMOTION;
 
-  return price / 1000;
+  return price / 100;
 };
 
 export { objectReducer, calculatePrice };
